@@ -7,7 +7,7 @@ export default function Home() {
         <title>Babel</title>
       </Head>
       <main className="min-h-screen bg-[#F9F9F7] flex flex-col items-center justify-center text-[#1C2B24] px-4 py-10">
-        <h1 className="text-[98px] font-typewriter mb-1">Babel</h1>
+        <h1 className="text-[120px] font-typewriter mb-1">Babel</h1>
         <p className="font-belgian text-[14px] -mt-1 mb-6">by Algobvio</p>
 
         <input
