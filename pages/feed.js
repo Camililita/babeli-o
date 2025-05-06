@@ -1,91 +1,95 @@
-import Image from "next/image";
+import { useState } from 'react';
+import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 export default function Feed() {
-  return (
-    <main className="min-h-screen bg-[#F9F9F7] text-[#1C2B24] pb-24">
-      {/* Header */}
-      <header className="flex items-center justify-between px-4 pt-6 pb-3">
-        <Image src="/icons/profile.svg" alt="profile" width={32} height={32} />
-        <div className="flex space-x-6 text-sm">
-          <span className="border-b-2 border-black pb-1">Para ti</span>
-          <span className="text-[#999]">Guardados</span>
-        </div>
-        <h1 className="font-typewriter text-xl">Babel</h1>
-      </header>
+  const [tab, setTab] = useState('foryou');
 
-      {/* Post 1 */}
-      <div className="px-4 pb-6">
-        <div className="flex items-center space-x-2 mb-1">
-          <Image src="/icons/profile.svg" alt="profile" width={24} height={24} />
-          <div>
-            <p className="text-sm font-medium">@lalora</p>
-            <p className="text-xs text-[#666]">González Catán, Argentina</p>
-          </div>
-        </div>
-        <p className="font-bold text-sm mb-2">
-          EL VECINO HABLA CON LOS PAJARITOS
-        </p>
-        <p className="whitespace-pre-line text-sm">
-          qué lenta
-          {"\n"}es la danza{"
-"}de las nubes
-          {"\n\n"}que deleitan{"
-"}a los pájaros
-          {"\n\n"}que miran{"
-"}desde los cables{"
-"}de la ciudad.
-          {"\n\n"}Las miran y comentan{"
-"}que los vientos allá arriba{"
-"}corren rápido
-          {"\n\n"}y que sus antepasados{"
-"}sabían volar{"
-"}sin nada a lo que aferrarse.
-        </p>
-        <div className="flex justify-end mt-3 space-x-4">
-          <Image src="/icons/like.svg" alt="like" width={20} height={20} />
-          <Image src="/icons/send.svg" alt="send" width={20} height={20} />
-        </div>
+  return (
+    <div className="min-h-screen bg-[#F9F9F7] text-[#1C2B24] px-4 pb-28 pt-6 font-lora">
+      {/* Header */}
+      <div className="flex justify-between items-center mb-6">
+        <img
+          src="/profile.jpg"
+          alt="User avatar"
+          className="w-9 h-9 rounded-full object-cover"
+        />
+        <h1 className="text-[28px] font-typewriter">Babel</h1>
       </div>
 
-      {/* Separator */}
-      <div className="border-t border-dashed mx-4 border-[#999] my-2" />
+      {/* Tabs */}
+      <div className="flex justify-around border-b border-[#1C2B24]/40 text-sm mb-3">
+        <button
+          className={`pb-1 ${tab === 'foryou' ? 'border-b-2 border-[#1C2B24] font-bold' : 'text-[#999]'}`}
+          onClick={() => setTab('foryou')}
+        >
+          Para ti
+        </button>
+        <button
+          className={`pb-1 ${tab === 'saved' ? 'border-b-2 border-[#1C2B24] font-bold' : 'text-[#999]'}`}
+          onClick={() => setTab('saved')}
+        >
+          Guardados
+        </button>
+      </div>
 
-      {/* Post 2 */}
-      <div className="px-4">
-        <div className="flex items-center space-x-2 mb-1">
-          <Image src="/icons/profile.svg" alt="profile" width={24} height={24} />
-          <div>
-            <p className="text-sm font-medium">@delfinasanda</p>
-            <p className="text-xs text-[#666]">Caballo Chiquito, Argentina</p>
+      {/* Post */}
+      <div className="space-y-10">
+        {[1, 2].map((item, idx) => (
+          <div key={idx} className="border-b border-dashed border-[#1C2B24]/40 pb-6">
+            <div className="flex items-center gap-2 mb-1">
+              <img
+                src="/profile.jpg"
+                alt="Avatar"
+                className="w-7 h-7 rounded-full object-cover"
+              />
+              <div>
+                <p className="text-sm font-lora">@lalora</p>
+                <p className="text-xs text-[#999] -mt-1">González Catán, Argentina</p>
+              </div>
+            </div>
+            <p className="font-bold text-[14px] font-lora uppercase mt-2">
+              EL VECINO HABLA CON LOS PAJARITOS
+            </p>
+            <p className="whitespace-pre-line mt-2 text-sm">
+              qué lenta
+              {'\n'}es la danza
+              {'\n'}de las nubes
+              {'\n'}
+              {'\n'}que deleitan
+              {'\n'}a los pájaros
+              {'\n'}
+              {'\n'}que miran
+              {'\n'}desde los cables
+              {'\n'}de la ciudad.
+              {'\n'}
+              {'\n'}Las miran y comentan
+              {'\n'}que los vientos allá arriba
+              {'\n'}corren rápido
+              {'\n'}
+              {'\n'}y que sus antepasados
+              {'\n'}sabían volar
+              {'\n'}sin nada a lo que aferrarse.
+            </p>
+            <div className="flex justify-end gap-4 mt-2">
+              <img src="/icons/colab.svg" className="w-5" />
+              <img src="/icons/mensajito.svg" className="w-5" />
+            </div>
           </div>
-        </div>
-        <p className="font-bold text-sm mb-2">
-          EL VECINO HABLA CON LOS PAJARITOS
-        </p>
-        <p className="whitespace-pre-line text-sm">
-          qué lenta{"
-"}es la danza{"
-"}de las nubes
-        </p>
-        <div className="flex justify-end mt-3">
-          <div className="bg-[#1C2B24] p-2 rounded-full">
-            <Image src="/icons/write.svg" alt="edit" width={20} height={20} />
-          </div>
-        </div>
+        ))}
       </div>
 
       {/* NavBar */}
-      <nav className="fixed bottom-0 w-full bg-[#F9F9F7] border-t border-[#ddd] flex justify-around items-center py-2">
-        <Image src="/icons/casa.svg" alt="home" width={24} height={24} />
-        <Image src="/icons/search.svg" alt="search" width={24} height={24} />
-        <Image src="/icons/manito.svg" alt="notifs" width={24} height={24} />
-        <div className="bg-[#1C2B24] p-2 rounded-full -mt-6">
-          <Image src="/icons/lapiz.svg" alt="write" width={28} height={28} />
+      <div className="fixed bottom-0 left-0 w-full bg-[#F9F9F7] border-t border-[#1C2B24]/10 flex justify-around items-center h-14 text-[#1C2B24]">
+        <img src="/icons/casa.svg" className="w-5" />
+        <img src="/icons/search.svg" className="w-5" />
+        <img src="/icons/manito.svg" className="w-5" />
+        <div className="bg-[#1C2B24] rounded-full p-2 -mt-6">
+          <img src="/icons/lapiz.svg" className="w-5 invert" />
         </div>
-        <Image src="/icons/mensajito.svg" alt="messages" width={24} height={24} />
-        <Image src="/icons/premio.svg" alt="contests" width={24} height={24} />
-        <Image src="/icons/colab.svg" alt="collab" width={24} height={24} />
-      </nav>
-    </main>
+        <img src="/icons/mensajito.svg" className="w-5" />
+        <img src="/icons/premio.svg" className="w-5" />
+        <img src="/icons/colab.svg" className="w-5" />
+      </div>
+    </div>
   );
 }
