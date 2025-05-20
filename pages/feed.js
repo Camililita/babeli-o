@@ -70,9 +70,9 @@ export default function Feed() {
           ))}
         </main>
 
-        {/* Floating Write Button */}
-        <div className="fixed bottom-[56px] left-1/2 -translate-x-1/2 z-50 bg-[#1C2B24] p-4 rounded-full shadow-lg">
-          <Image src="/icons/lapiz.svg" alt="Escribir" width={28} height={28} />
+        {/* Floating Write Button - repositioned more naturally for mobile */}
+        <div className="fixed bottom-20 right-4 z-50 bg-[#1C2B24] p-3 rounded-full shadow-lg">
+          <Image src="/icons/lapiz.svg" alt="Escribir" width={24} height={24} />
         </div>
 
         {/* Navbar */}
@@ -83,7 +83,7 @@ export default function Feed() {
           <div className="w-[24px]" />
           <Image src="/icons/mensajito.svg" alt="Mensajes" width={24} height={24} />
           <Image src="/icons/premio.svg" alt="Concursos" width={24} height={24} />
-          <Image src="/icons/colab.svg" alt="Colaboraciones" width={24} height={24} />
+          <Image src="/icons/llave.svg" alt="Guardados" width={24} height={24} />
         </nav>
       </div>
     </>
