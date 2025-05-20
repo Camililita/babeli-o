@@ -10,68 +10,35 @@ export default function Feed() {
       location: 'González Catán, Argentina',
       avatar: '/profile/lalora.png',
       title: 'EL VECINO HABLA CON LOS PAJARITOS',
-      poem: `qué lenta
-es la danza
-de las nubes
-
-que deleitan
-a los pájaros
-
-que miran
-desde los cables
-de la ciudad.
-
-Las miran y comentan
-que los vientos allá arriba
-corren rápido
-
-y que sus antepasados
-sabían volar
-sin nada a lo que aferrarse.`
+      poem: `qué lenta\nes la danza\nde las nubes\n\nque deleitan\na los pájaros\n\nque miran\ndesde los cables\nde la ciudad.\n\nLas miran y comentan\nque los vientos allá arriba\ncorren rápido\n\ny que sus antepasados\nsabían volar\nsin nada a lo que aferrarse.`
     },
     {
       user: '@delfinasanda',
       location: 'Caballo Chiquito, Argentina',
       avatar: '/profile/delfinasanda.png',
       title: 'EL VECINO HABLA CON LOS PAJARITOS',
-      poem: `qué lenta
-es la danza
-de las nubes`
+      poem: `qué lenta\nes la danza\nde las nubes`
     },
     {
       user: '@elcaminante',
       location: 'Valle Azul, Argentina',
       avatar: '/profile/delfinasanda.png',
       title: 'TORMENTA EN CALMA',
-      poem: `la calma
-es apenas
-una pausa
-en la boca del viento
-
-que recuerda
-que todo
-vuelve a girar`
+      poem: `la calma\nes apenas\nuna pausa\nen la boca del viento\n\nque recuerda\nque todo\nvuelve a girar`
     },
     {
       user: '@margarita.m',
       location: 'Santa Lucía, Uruguay',
       avatar: '/profile/delfinasanda.png',
       title: 'EL NOMBRE DEL RÍO',
-      poem: `el río
-no tiene nombre
-hasta que alguien
-se detiene
-a escucharlo`
+      poem: `el río\nno tiene nombre\nhasta que alguien\nse detiene\na escucharlo`
     },
     {
       user: '@zorrito',
       location: 'Tilcara, Argentina',
       avatar: '/profile/delfinasanda.png',
       title: 'LADRIDO DE SOMBRA',
-      poem: `ladró
-la sombra
-y el eco
-fue a esconderse`
+      poem: `ladró\nla sombra\ny el eco\nfue a esconderse`
     }
   ];
 
