@@ -24,7 +24,7 @@ export default function Feed() {
         <title>Feed – Babel</title>
       </Head>
 
-      <main className="min-h-screen bg-[#F9F9F7] text-[#1C2B24] px-4 pt-6 pb-[72px] font-lora">
+      <main className="h-screen overflow-y-scroll bg-[#F9F9F7] text-[#1C2B24] px-4 pt-6 pb-[72px] font-lora">
         {/* Header */}
         <div className="flex items-center justify-between mb-4">
           <Image src="/icons/avatar.svg" alt="Avatar" width={32} height={32} className="rounded-full" />
@@ -41,7 +41,7 @@ export default function Feed() {
         {posts.map((post, index) => (
           <div key={index} className="mb-10">
             <div className="flex items-center gap-2 mb-1">
-              <Image src="/icons/avatar.svg" alt={post.user} width={24} height={24} className="rounded-full" />
+              <Image src="/profile/avatar.svg" alt={post.user} width={24} height={24} className="rounded-full" />
               <div>
                 <p className="text-sm font-bold">{post.user}</p>
                 <p className="text-xs text-[#1C2B24]/50">{post.location}</p>
@@ -50,10 +50,10 @@ export default function Feed() {
             <p className="font-bold mt-2 mb-2 uppercase tracking-wide">{post.title}</p>
             <p className="whitespace-pre-line leading-relaxed mb-4">{post.poem}</p>
             <div className="flex gap-4">
-              <Image src="/icons/colab.svg" alt="Colab" width={20} height={20} />
-              <Image src="/icons/send.svg" alt="Send" width={20} height={20} />
+              <Image src="/icons/colab.svg" alt="Colaborar" width={20} height={20} />
+              <Image src="/icons/send.svg" alt="Enviar" width={20} height={20} />
             </div>
-            <div className="h-px bg-[#1C2B24]/20 border-dashed my-4" />
+            <hr className="border-t border-dashed border-[#1C2B24]/30 my-6" />
           </div>
         ))}
       </main>
@@ -68,7 +68,7 @@ export default function Feed() {
         <Image src="/icons/casa.svg" alt="Inicio" width={24} height={24} />
         <Image src="/icons/search.svg" alt="Buscar" width={24} height={24} />
         <Image src="/icons/manito.svg" alt="Notificaciones" width={24} height={24} />
-        <div className="w-[24px]" /> {/* espacio para botón central */}
+        <div className="w-[24px]" />
         <Image src="/icons/mensajito.svg" alt="Mensajes" width={24} height={24} />
         <Image src="/icons/premio.svg" alt="Concursos" width={24} height={24} />
         <Image src="/icons/colab.svg" alt="Colaboraciones" width={24} height={24} />
