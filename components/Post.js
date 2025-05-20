@@ -18,7 +18,9 @@ export default function Post({ user, location, title, poem, avatar }) {
           <Image src="/icons/guardado.svg" alt="Guardar" width={28} height={28} />
           <Image src="/icons/avioncito.svg" alt="Enviar" width={28} height={28} />
         </div>
-        <hr className="border-t border-dashed border-[#1C2B24]/40 my-10" style={{ borderTopStyle: 'dashed', borderTopWidth: '2px', borderSpacing: '12px' }} />
+        <svg viewBox="0 0 100 2" preserveAspectRatio="none" className="w-full h-[12px] my-10">
+  <line x1="0" y1="1" x2="100" y2="1" stroke="#1C2B24" strokeWidth="2" strokeDasharray="6 10" />
+</svg>
       </div>
     </div>
   );
