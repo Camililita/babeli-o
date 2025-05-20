@@ -1,6 +1,7 @@
 // pages/feed.js
 import Head from 'next/head';
 import Image from 'next/image';
+import Post from '../components/Post';
 
 export default function Feed() {
   const posts = [
@@ -39,22 +40,7 @@ export default function Feed() {
 
         {/* Posts */}
         {posts.map((post, index) => (
-          <div key={index} className="mb-10">
-            <div className="flex items-center gap-2 mb-1">
-              <Image src="/profile/avatar.svg" alt={post.user} width={24} height={24} className="rounded-full" />
-              <div>
-                <p className="text-sm font-bold">{post.user}</p>
-                <p className="text-xs text-[#1C2B24]/50">{post.location}</p>
-              </div>
-            </div>
-            <p className="font-bold mt-2 mb-2 uppercase tracking-wide">{post.title}</p>
-            <p className="whitespace-pre-line leading-relaxed mb-4">{post.poem}</p>
-            <div className="flex gap-4">
-              <Image src="/icons/colab.svg" alt="Colaborar" width={20} height={20} />
-              <Image src="/icons/send.svg" alt="Enviar" width={20} height={20} />
-            </div>
-            <hr className="border-t border-dashed border-[#1C2B24]/30 my-6" />
-          </div>
+          <Post key={index} {...post} />
         ))}
       </main>
 
