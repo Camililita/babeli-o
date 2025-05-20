@@ -71,9 +71,9 @@ export default function Feed() {
         </main>
 
         {/* Floating Write Button */}
-        <div className="fixed bottom-24 right-5 z-50 w-[64px] h-[64px] bg-[#1C2B24] rounded-full shadow-xl flex items-center justify-center">
-          <Image src="/icons/lapiz.svg" alt="Escribir" width={28} height={28} className="invert" />
-        </div>
+        <div className="fixed bottom-24 right-5 z-50 w-[64px] h-[64px] bg-black rounded-full shadow-xl flex items-center justify-center">
+  <Image src="/icons/lapiz.svg" alt="Escribir" width={28} height={28} />
+</div>
 
         {/* Navbar */}
         <nav className="fixed bottom-0 left-0 right-0 bg-[#F9F9F7] border-t border-[#1C2B24]/20 flex justify-around items-center px-4 py-2 text-xs">
