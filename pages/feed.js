@@ -57,9 +57,9 @@ export default function Feed() {
           </div>
 
           {/* Tabs */}
-          <div className="flex justify-around border-b border-[#1C2B24]/30">
-            <button className="px-4 py-2 font-bold border-b-2 border-[#1C2B24]">Para ti</button>
-            <button className="px-4 py-2 font-bold border-b-2 border-transparent text-[#1C2B24]/50">Guardados</button>
+          <div className="flex justify-around border-b border-[#1C2B24]/30 text-xs">
+            <button className="px-3 py-1 font-medium border-b-2 border-[#1C2B24]">Para ti</button>
+            <button className="px-3 py-1 font-medium border-b-2 border-transparent text-[#1C2B24]/50">Guardados</button>
           </div>
         </div>
 
