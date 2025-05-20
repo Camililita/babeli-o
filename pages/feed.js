@@ -82,7 +82,7 @@ export default function Feed() {
           <Image src="/icons/manito.svg" alt="Notificaciones" width={24} height={24} />
           <Image src="/icons/mensajito.svg" alt="Mensajes" width={24} height={24} />
           <Image src="/icons/premio.svg" alt="Concursos" width={24} height={24} />
-          <Image src="/icons/corazon.svg" alt="Colaboraciones" width={24} height={24} />
+          <Image src="/icons/colab.svg" alt="Colaboraciones" width={24} height={24} />
         </nav>
       </div>
     </>
