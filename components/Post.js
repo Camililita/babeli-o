@@ -1,3 +1,4 @@
+// components/Post.js
 import Image from 'next/image';
 
 export default function Post({ user, location, title, poem, avatar }) {
@@ -13,10 +14,10 @@ export default function Post({ user, location, title, poem, avatar }) {
       <p className="font-bold mt-2 mb-2 uppercase tracking-wide">{title}</p>
       <p className="whitespace-pre-line leading-relaxed mb-4">{poem}</p>
       <div className="flex gap-4">
-        <Image src="/icons/colab.svg" alt="Colaborar" width={20} height={20} />
-        <Image src="/icons/send.svg" alt="Enviar" width={20} height={20} />
+        <Image src="/icons/guardado.svg" alt="Guardar" width={20} height={20} />
+        <Image src="/icons/avioncito.svg" alt="Enviar" width={20} height={20} />
       </div>
-      <hr className="border-t border-dashed border-[#1C2B24]/30 my-6" />
+      <hr className="border-t-2 border-dashed border-[#1C2B24]/40 my-6" />
     </div>
   );
 }
