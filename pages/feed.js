@@ -52,7 +52,7 @@ export default function Feed() {
         {/* Sticky Header */}
         <div className="sticky top-0 z-40 bg-[#F9F9F7] px-4 pt-6 pb-2">
           <div className="flex items-center justify-between mb-4">
-            <Image src="/profile/delfinasanda.png" alt="Avatar" width={32} height={32} className="rounded-full" />
+            <Image src="/profile/delfinasanda.png" alt="Avatar" width={32} height={32} className="rounded-full object-cover aspect-square" />
             <h1 className="text-[24px] font-typewriter">Babel</h1>
           </div>
 
@@ -82,7 +82,7 @@ export default function Feed() {
           <Image src="/icons/manito.svg" alt="Notificaciones" width={24} height={24} />
           <Image src="/icons/mensajito.svg" alt="Mensajes" width={24} height={24} />
           <Image src="/icons/premio.svg" alt="Concursos" width={24} height={24} />
-          <Image src="/icons/guardado.svg" alt="Guardados" width={24} height={24} />
+          <Image src="/icons/corazon.svg" alt="Colaboraciones" width={24} height={24} />
         </nav>
       </div>
     </>
