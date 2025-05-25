@@ -104,8 +104,8 @@ fue a esconderse`
         </main>
 
         {/* Floating Write Button */}
-        <div className="fixed bottom-24 right-5 z-50 w-[48px] h-[48px] bg-black rounded-full shadow-xl flex items-center justify-center">
-          <Image src="/icons/lapiz.svg" alt="Escribir" width={36} height={36} className="object-contain" />
+        <div className="fixed bottom-24 right-5 z-50">
+          <Image src="/icons/lapiz.svg" alt="Escribir" width={48} height={48} className="object-contain" />
         </div>
 
         {/* Navbar */}
