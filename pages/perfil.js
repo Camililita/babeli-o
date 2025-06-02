@@ -25,7 +25,9 @@ export default function Perfil() {
 
           {/* Perfil */}
           <div className="flex flex-col items-center text-center mb-4">
-            <Image src="/profile/mirtha.jpg" alt="Mirtha" width={96} height={96} className="rounded-full object-cover" />
+            <div className="w-[96px] h-[96px] rounded-full overflow-hidden">
+              <Image src="/profile/mirtha.jpg" alt="Mirtha" width={96} height={96} className="object-cover" />
+            </div>
             <p className="font-bold text-lg mt-2">@mirtha</p>
             <p className="text-sm text-[#1C2B24]/70">Buenos, Aires Argentina</p>
             <p className="italic text-sm text-[#1C2B24]/50">Como te ven te tratan</p>
@@ -47,7 +49,9 @@ export default function Perfil() {
           {poems.map((poem, index) => (
             <div key={index} className="mb-6">
               <div className="flex items-center gap-2 mb-1">
-                <Image src="/profile/mirtha.jpg" alt="mirtha" width={24} height={24} className="rounded-full object-cover" />
+                <div className="w-[24px] h-[24px] rounded-full overflow-hidden">
+                  <Image src="/profile/mirtha.jpg" alt="mirtha" width={24} height={24} className="object-cover" />
+                </div>
                 <div>
                   <p className="text-sm font-bold">@mirtha</p>
                   <p className="text-xs text-[#1C2B24]/50">González Catán, Argentina</p>
@@ -78,3 +82,4 @@ export default function Perfil() {
     </>
   );
 }
+
