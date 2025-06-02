@@ -25,13 +25,15 @@ export default function Perfil() {
 
           {/* Perfil */}
           <div className="flex flex-col items-center text-center mb-4">
-            <Image
-              src="/profile/mirtha.jpg"
-              alt="Mirtha"
-              width={96}
-              height={96}
-              className="rounded-full object-cover"
-            />
+            <div className="w-[96px] h-[96px] rounded-full overflow-hidden">
+              <Image
+                src="/profile/mirtha.jpg"
+                alt="Mirtha"
+                width={96}
+                height={96}
+                className="object-cover"
+              />
+            </div>
             <p className="font-bold text-lg mt-2">@mirtha</p>
             <p className="text-sm text-[#1C2B24]/70">Buenos, Aires Argentina</p>
             <p className="italic text-sm text-[#1C2B24]/50">Como te ven te tratan</p>
