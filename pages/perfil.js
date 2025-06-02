@@ -3,6 +3,12 @@ import Head from 'next/head';
 import Image from 'next/image';
 
 export default function Perfil() {
+  const poems = [
+    `qué lenta\nes la danza\nde las nubes\n\nque deleitan\na los pájaros\n\nque miran\ndesde los cables\nde la ciudad.\n\nLas miran y comentan\nque los vientos allá arriba\ncorren rápido`,
+    `la calma\nes apenas\nuna pausa\nen la boca del viento\nque recuerda\nque todo\nvuelve a moverse`,
+    `el río\nno tiene nombre\npero todos saben\nqué dice\ncuando baja\ncrecido`,
+  ];
+
   return (
     <>
       <Head>
@@ -36,34 +42,22 @@ export default function Perfil() {
           </div>
         </div>
 
-        {/* Poema */}
+        {/* Poemas */}
         <main className="overflow-y-scroll h-full px-4 pb-[72px] pt-4">
-          <div className="mb-6">
-            <div className="flex items-center gap-2 mb-1">
-              <Image src="/profile/avatar.svg" alt="mirtha" width={24} height={24} className="rounded-full object-cover" />
-              <div>
-                <p className="text-sm font-bold">@mirtha</p>
-                <p className="text-xs text-[#1C2B24]/50">González Catán, Argentina</p>
+          {poems.map((poem, index) => (
+            <div key={index} className="mb-6">
+              <div className="flex items-center gap-2 mb-1">
+                <Image src="/profile/mirtha.jpg" alt="mirtha" width={24} height={24} className="rounded-full object-cover" />
+                <div>
+                  <p className="text-sm font-bold">@mirtha</p>
+                  <p className="text-xs text-[#1C2B24]/50">González Catán, Argentina</p>
+                </div>
               </div>
+              <p className="font-bold mt-2 mb-2">EL VECINO HABLA CON LOS PAJARITOS</p>
+              <p className="whitespace-pre-line text-sm leading-relaxed ml-[32px]">{poem}</p>
+              <hr className="border-t border-dashed border-[#1C2B24]/30 my-4 mx-4" />
             </div>
-            <p className="font-bold mt-2 mb-2">EL VECINO HABLA CON LOS PAJARITOS</p>
-            <p className="whitespace-pre-line text-sm leading-relaxed">
-              qué lenta
-              es la danza
-              de las nubes
-
-              que deleitan
-              a los pájaros
-
-              que miran
-              desde los cables
-              de la ciudad.
-
-              Las miran y comentan
-              que los vientos allá arriba
-              corren rápido
-            </p>
-          </div>
+          ))}
         </main>
 
         {/* Floating Write Button */}
@@ -84,4 +78,3 @@ export default function Perfil() {
     </>
   );
 }
-
