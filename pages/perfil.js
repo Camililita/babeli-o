@@ -15,7 +15,7 @@ export default function Perfil() {
         <title>Perfil – Babel</title>
       </Head>
 
-      <div className="h-screen bg-[#F9F9F7] text-[#1C2B24] font-lora relative">
+      <div className="h-screen flex flex-col bg-[#F9F9F7] text-[#1C2B24] font-lora relative">
         {/* Encabezado */}
         <div className="sticky top-0 z-40 bg-[#F9F9F7] px-4 pt-6 pb-2">
           <div className="flex items-center justify-between mb-4">
@@ -51,7 +51,7 @@ export default function Perfil() {
         </div>
 
         {/* Poemas */}
-        <main className="overflow-y-scroll h-full px-4 pb-[72px] pt-4">
+        <main className="flex-1 overflow-y-auto bg-[#F9F9F7] px-4 pb-[72px] pt-4">
           {poems.map((poem, index) => (
             <div key={index} className="mb-6">
               <div className="flex items-center gap-2 mb-1">
@@ -88,5 +88,4 @@ export default function Perfil() {
     </>
   );
 }
-
 
