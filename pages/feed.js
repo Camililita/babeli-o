@@ -27,7 +27,9 @@ corren rápido
 
 y que sus antepasados
 sabían volar
-sin nada a lo que aferrarse.`
+sin nada a lo que aferrarse.`,
+      collaborative: true,
+      collaborators: ['@delfinasanda']
     },
     {
       user: '@delfinasanda',
@@ -36,7 +38,9 @@ sin nada a lo que aferrarse.`
       title: 'EL VECINO HABLA CON LOS PAJARITOS',
       poem: `qué lenta
 es la danza
-de las nubes`
+de las nubes`,
+      collaborative: false,
+      collaborators: []
     },
     {
       user: '@elcaminante',
@@ -47,10 +51,11 @@ de las nubes`
 es apenas
 una pausa
 en la boca del viento
-
 que recuerda
 que todo
-vuelve a girar`
+vuelve a moverse`,
+      collaborative: false,
+      collaborators: []
     },
     {
       user: '@margarita.m',
@@ -59,19 +64,30 @@ vuelve a girar`
       title: 'EL NOMBRE DEL RÍO',
       poem: `el río
 no tiene nombre
-hasta que alguien
-se detiene
-a escucharlo`
+pero todos saben
+qué dice
+cuando baja
+crecido`,
+      collaborative: false,
+      collaborators: []
     },
     {
-      user: '@zorrito',
-      location: 'Tilcara, Argentina',
-      avatar: '/profile/delfinasanda.png',
-      title: 'LADRIDO DE SOMBRA',
-      poem: `ladró
-la sombra
-y el eco
-fue a esconderse`
+      user: '@azulgris',
+      location: 'La Paz, Bolivia',
+      avatar: '/profile/lalora.png',
+      title: 'SUSURROS DE LA PIEDRA',
+      poem: `la piedra
+guarda el secreto
+de los pasos
+que la rozaron
+
+@manosdelviento
+
+escribe
+con polvo y silencio
+un poema nuevo`,
+      collaborative: true,
+      collaborators: ['@manosdelviento']
     }
   ];
 
@@ -82,24 +98,51 @@ fue a esconderse`
       </Head>
 
       <div className="h-screen bg-[#F9F9F7] text-[#1C2B24] font-lora relative">
-        {/* Sticky Header */}
+        {/* Encabezado */}
         <div className="sticky top-0 z-40 bg-[#F9F9F7] px-4 pt-6 pb-2">
-          <div className="flex items-center justify-between mb-4">
-            <Image src="/profile/delfinasanda.png" alt="Avatar" width={32} height={32} className="rounded-full object-cover aspect-square" />
+          <div className="flex items-center justify-between mb-2">
+            <Image src="/profile/mirtha.jpg" alt="Avatar" width={32} height={32} className="rounded-full" />
+            <div className="flex gap-6 text-sm">
+              <button className="font-semibold border-b-2 border-[#1C2B24] pb-1">Para ti</button>
+              <button className="text-[#1C2B24]/50 pb-1">Guardados</button>
+            </div>
             <h1 className="text-[24px] font-typewriter">Babel</h1>
-          </div>
-
-          {/* Tabs */}
-          <div className="flex justify-center gap-8 border-b border-[#1C2B24]/30 text-sm mt-[-4px]">
-            <button className="px-2 py-1 font-semibold relative text-[#1C2B24] after:content-[''] after:block after:h-[2px] after:w-full after:bg-[#1C2B24] after:mt-1">Para ti</button>
-            <button className="px-2 py-1 font-semibold text-[#1C2B24]/50">Guardados</button>
           </div>
         </div>
 
-        {/* Scrollable Feed */}
-        <main className="overflow-y-scroll h-full px-4 pb-[72px] pt-2">
+        {/* Feed */}
+        <main className="overflow-y-scroll h-full px-4 pb-[72px] pt-4 bg-[#F9F9F7]">
           {posts.map((post, index) => (
-            <Post key={index} {...post} />
+            <div key={index} className="mb-6">
+              <div className="flex items-center gap-2 mb-1">
+                <div className="w-[24px] h-[24px] rounded-full overflow-hidden">
+                  <Image src={post.avatar} alt={post.user} width={24} height={24} className="object-cover rounded-full" />
+                </div>
+                <div>
+                  <p className="text-sm font-bold">
+                    {post.user}{' '}
+                    {post.collaborative && post.collaborators.map(c => (
+                      <span key={c} className="font-normal italic text-sm">{c}</span>
+                    ))}
+                  </p>
+                  <p className="text-xs text-[#1C2B24]/50">{post.location}</p>
+                  {post.collaborative && (
+                    <div className="text-[10px] text-[#1C2B24]/40 italic flex items-center gap-1">
+                      <Image src="/icons/colaborativo.svg" alt="Poema Colaborativo" width={12} height={12} />
+                      <span>Poema Colaborativo</span>
+                    </div>
+                  )}
+                </div>
+              </div>
+              <p className="font-bold mt-2 mb-2">{post.title}</p>
+              <p className="whitespace-pre-line text-sm leading-relaxed ml-[32px]">{post.poem}</p>
+              <div className="flex justify-end items-center gap-4 mt-2 pr-4">
+                <Image src="/icons/guardado.svg" alt="Guardar" width={18} height={18} />
+                <Image src="/icons/avioncito.svg" alt="Enviar" width={18} height={18} />
+                {!post.collaborative && <Image src="/icons/colab.svg" alt="Colaborar" width={18} height={18} />}
+              </div>
+              <hr className="border-t border-dashed border-[#1C2B24]/30 my-4" />
+            </div>
           ))}
         </main>
 
