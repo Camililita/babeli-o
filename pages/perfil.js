@@ -51,7 +51,7 @@ export default function Perfil() {
         </div>
 
         {/* Poemas */}
-        <main className="overflow-y-scroll h-full px-4 pb-[72px] pt-4">
+        <main className="overflow-y-scroll h-full px-4 pb-[72px] pt-4 bg-[#F9F9F7]">
           {poems.map((poem, index) => (
             <div key={index} className="mb-6">
               <div className="flex items-center gap-2 mb-1">
