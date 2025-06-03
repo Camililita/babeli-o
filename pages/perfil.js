@@ -31,7 +31,7 @@ export default function Perfil() {
                 alt="Mirtha"
                 width={96}
                 height={96}
-                className="object-cover"
+                className="object-cover rounded-full"
               />
             </div>
             <p className="font-bold text-lg mt-2">@mirtha</p>
@@ -56,7 +56,7 @@ export default function Perfil() {
             <div key={index} className="mb-6">
               <div className="flex items-center gap-2 mb-1">
                 <div className="w-[24px] h-[24px] rounded-full overflow-hidden">
-                  <Image src="/profile/mirtha.jpg" alt="mirtha" width={24} height={24} className="object-cover" />
+                  <Image src="/profile/mirtha.jpg" alt="mirtha" width={24} height={24} className="object-cover rounded-full" />
                 </div>
                 <div>
                   <p className="text-sm font-bold">@mirtha</p>
