@@ -83,8 +83,8 @@ que la rozaron
 
 @manosdelviento
 
-escribe
-con polvo y silencio
+<em>escribe
+con polvo y silencio</em>
 un poema nuevo`,
       collaborative: true,
       collaborators: ['@manosdelviento']
@@ -127,19 +127,19 @@ un poema nuevo`,
                   </p>
                   <p className="text-xs text-[#1C2B24]/50">{post.location}</p>
                   {post.collaborative && (
-                    <div className="text-[10px] text-[#1C2B24]/40 italic flex items-center gap-1">
-                      <Image src="/icons/colaborativo.svg" alt="Poema Colaborativo" width={12} height={12} />
+                    <div className="text-[10px] text-[#1C2B24]/40 italic flex items-center gap-1 mt-1">
+                      <Image src="/icons/colaborativo.svg" alt="Poema Colaborativo" width={14} height={14} className="opacity-60" />
                       <span>Poema Colaborativo</span>
                     </div>
                   )}
                 </div>
               </div>
               <p className="font-bold mt-2 mb-2">{post.title}</p>
-              <p className="whitespace-pre-line text-sm leading-relaxed ml-[32px]">{post.poem}</p>
+              <p className="whitespace-pre-line text-sm leading-relaxed ml-[32px]" dangerouslySetInnerHTML={{ __html: post.poem }}></p>
               <div className="flex justify-end items-center gap-4 mt-2 pr-4">
                 <Image src="/icons/guardado.svg" alt="Guardar" width={18} height={18} />
                 <Image src="/icons/avioncito.svg" alt="Enviar" width={18} height={18} />
-                {!post.collaborative && <Image src="/icons/colab.svg" alt="Colaborar" width={18} height={18} />}
+                {!post.collaborative && <Image src="/icons/colab.svg" alt="Colaborar" width={18} height={18} className="opacity-60" />}
               </div>
               <hr className="border-t border-dashed border-[#1C2B24]/30 my-4" />
             </div>
@@ -158,7 +158,7 @@ un poema nuevo`,
           <Image src="/icons/manito.svg" alt="Notificaciones" width={24} height={24} />
           <Image src="/icons/mensajito.svg" alt="Mensajes" width={24} height={24} />
           <Image src="/icons/premio.svg" alt="Concursos" width={24} height={24} />
-          <Image src="/icons/colab.svg" alt="Colaboraciones" width={24} height={24} />
+          <Image src="/icons/colab.svg" alt="Colaboraciones" width={24} height={24} className="opacity-60" />
         </nav>
       </div>
     </>
