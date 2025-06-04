@@ -17,17 +17,17 @@ de las nubes
 que deleitan
 a los pájaros
 
-que miran
+<em>que miran
 desde los cables
-de la ciudad.
+de la ciudad.</em>
 
 Las miran y comentan
 que los vientos allá arriba
 corren rápido
 
-y que sus antepasados
+<em>y que sus antepasados
 sabían volar
-sin nada a lo que aferrarse.`,
+sin nada a lo que aferrarse.</em>`,
       collaborative: true,
       collaborators: ['@delfinasanda']
     },
@@ -128,7 +128,7 @@ un poema nuevo`,
                   <p className="text-xs text-[#1C2B24]/50">{post.location}</p>
                   {post.collaborative && (
                     <div className="text-[10px] text-[#1C2B24]/40 italic flex items-center gap-1 mt-1">
-                      <Image src="/icons/colaborativo.svg" alt="Poema Colaborativo" width={14} height={14} className="opacity-60" />
+                      <Image src="/icons/colaborativo.svg" alt="Poema Colaborativo" width={50} height={14} className="opacity-60" />
                       <span>Poema Colaborativo</span>
                     </div>
                   )}
