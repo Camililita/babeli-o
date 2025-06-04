@@ -115,8 +115,8 @@ un poema nuevo`,
           {posts.map((post, index) => (
             <div key={index} className="mb-6">
               <div className="flex items-center gap-2 mb-1">
-                <div className="w-[24px] h-[24px] rounded-full overflow-hidden">
-                  <Image src={post.avatar} alt={post.user} width={24} height={24} className="object-cover rounded-full" />
+                <div className="w-[32px] h-[32px] rounded-full overflow-hidden border">
+                  <Image src={post.avatar} alt={post.user} width={32} height={32} className="object-cover rounded-full" />
                 </div>
                 <div>
                   <p className="text-sm font-bold">
@@ -128,8 +128,7 @@ un poema nuevo`,
                   <p className="text-xs text-[#1C2B24]/50">{post.location}</p>
                   {post.collaborative && (
                     <div className="text-[10px] text-[#1C2B24]/40 italic flex items-center gap-1 mt-1">
-                      <Image src="/icons/colaborativo.svg" alt="Poema Colaborativo" width={50} height={14} className="opacity-60" />
-                      <span>Poema Colaborativo</span>
+                      <Image src="/icons/colaborativo.svg" alt="Poema Colaborativo" width={70} height={14} className="opacity-60" />
                     </div>
                   )}
                 </div>
