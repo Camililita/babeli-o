@@ -81,8 +81,6 @@ guarda el secreto
 de los pasos
 que la rozaron
 
-@manosdelviento
-
 <em>escribe
 con polvo y silencio</em>
 un poema nuevo`,
@@ -128,7 +126,7 @@ un poema nuevo`,
                   <p className="text-xs text-[#1C2B24]/50">{post.location}</p>
                   {post.collaborative && (
                     <div className="text-[10px] text-[#1C2B24]/40 italic flex items-center gap-1 mt-1">
-                      <Image src="/icons/colaborativo.svg" alt="Poema Colaborativo" width={70} height={14} className="opacity-60" />
+                      <Image src="/icons/colaborativo.svg" alt="Poema Colaborativo" width={100} height={20} className="opacity-60" />
                     </div>
                   )}
                 </div>
