@@ -8,7 +8,7 @@ export default function Feed() {
     {
       user: '@lalora',
       location: 'González Catán, Argentina',
-      avatar: '/profile/lalora.png',
+      avatar: '/profile/lalora.jpg',
       title: 'EL VECINO HABLA CON LOS PAJARITOS',
       poem: `qué lenta
 es la danza
@@ -34,7 +34,7 @@ sin nada a lo que aferrarse.</em>`,
     {
       user: '@delfinasanda',
       location: 'Caballo Chiquito, Argentina',
-      avatar: '/profile/delfinasanda.png',
+      avatar: '/profile/delfinasanda.jpg',
       title: 'EL VECINO HABLA CON LOS PAJARITOS',
       poem: `qué lenta
 es la danza
@@ -45,7 +45,7 @@ de las nubes`,
     {
       user: '@elcaminante',
       location: 'Valle Azul, Argentina',
-      avatar: '/profile/delfinasanda.png',
+      avatar: '/profile/delfinasanda.jpg',
       title: 'TORMENTA EN CALMA',
       poem: `la calma
 es apenas
@@ -60,7 +60,7 @@ vuelve a moverse`,
     {
       user: '@margarita.m',
       location: 'Santa Lucía, Uruguay',
-      avatar: '/profile/delfinasanda.png',
+      avatar: '/profile/delfinasanda.jpg',
       title: 'EL NOMBRE DEL RÍO',
       poem: `el río
 no tiene nombre
@@ -74,7 +74,7 @@ crecido`,
     {
       user: '@azulgris',
       location: 'La Paz, Bolivia',
-      avatar: '/profile/lalora.png',
+      avatar: '/profile/lalora.jpg',
       title: 'SUSURROS DE LA PIEDRA',
       poem: `la piedra
 guarda el secreto
