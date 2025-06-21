@@ -44,16 +44,13 @@ export default function Colab() {
       <h1 className="text-base font-bold mb-4 text-left max-w-[85%] mx-auto">EL VECINO HABLA CON LOS PAJARITOS</h1>
 
       {/* Poema editable */}
-      <div className="text-sm whitespace-pre-line leading-relaxed max-w-[85%] mx-auto">
-        <p className="text-left text-[#1C2B24]/60">qué lenta
-es la danza
-de las nubes</p>
+      <div className="text-sm whitespace-pre-line leading-relaxed max-w-[85%] mx-auto text-left pb-4">
+        <p className="text-[#1C2B24]/60">qué lenta\nes la danza\nde las nubes</p>
 
-        <p className="mt-4 text-left text-[#1C2B24]/60">que deleitan
-a los pájaros</p>
+        <p className="mt-4 text-[#1C2B24]/60">que deleitan\na los pájaros</p>
 
         <p
-          className="mt-4 italic text-[#1C2B24] cursor-text animate-blink text-left"
+          className="mt-4 italic text-[#1C2B24] cursor-text animate-blink"
           contentEditable
           suppressContentEditableWarning={true}
           ref={inputRef}
@@ -61,10 +58,10 @@ a los pájaros</p>
           que miran desde los cables de la ciudad.
         </p>
 
-        <p className="mt-4 text-left text-[#1C2B24]/60">Las miran y comentan que los vientos allá arriba corren rápido</p>
+        <p className="mt-4 text-[#1C2B24]/60">Las miran y comentan que los vientos allá arriba corren rápido</p>
 
         <p
-          className="mt-4 italic text-[#1C2B24] cursor-text animate-blink text-left"
+          className="mt-4 italic text-[#1C2B24] cursor-text animate-blink"
           contentEditable
           suppressContentEditableWarning={true}
         >
@@ -102,7 +99,7 @@ a los pájaros</p>
       </div>
 
       {/* Botón flotante Aa */}
-      <div className="fixed bottom-[260px] right-5 z-50">
+      <div className="fixed bottom-[330px] right-5 z-50">
         <Image src="/icons/Aa.svg" alt="Estilo" width={48} height={48} />
       </div>
 
