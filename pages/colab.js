@@ -20,15 +20,17 @@ export default function Colab() {
       </Head>
 
       {/* Header superior con flecha, borrador centrado y botón de revisión */}
-      <div className="flex items-center justify-between mb-4 relative">
+      <div className="flex items-center justify-between mb-1 relative">
         <Link href="/feed">
           <button className="ml-1 text-xl z-10">←</button>
         </Link>
         <h2 className="text-sm font-bold text-center w-full absolute left-0 right-0">Borrador</h2>
-        <div className="w-[140px] flex justify-end mt-1 mr-2 z-10 translate-y-2">
+        <div className="w-[160px] flex justify-end mr-2 z-10">
           <button className="bg-[#1C2B24] text-white text-xs px-3 py-1 rounded-full">Revisar colaboración</button>
         </div>
       </div>
+
+      <hr className="border-t border-[#1C2B24]/10 my-2" />
 
       {/* Info de colaboración */}
       <div className="flex items-center gap-2 mb-1">
@@ -42,13 +44,13 @@ export default function Colab() {
       <h1 className="text-base font-bold mb-4">EL VECINO HABLA CON LOS PAJARITOS</h1>
 
       {/* Poema editable */}
-      <div className="text-sm whitespace-pre-line leading-relaxed">
+      <div className="text-sm whitespace-pre-line leading-relaxed max-w-[85%] ml-auto">
         <p>qué lenta
-        es la danza
-        de las nubes</p>
+es la danza
+de las nubes</p>
 
         <p className="mt-4">que deleitan
-        a los pájaros</p>
+a los pájaros</p>
 
         <p
           className="mt-4 italic text-[#1C2B24] cursor-text animate-blink"
