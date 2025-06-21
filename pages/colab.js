@@ -33,7 +33,7 @@ export default function Colab() {
       <hr className="border-t border-[#1C2B24]/10 my-2" />
 
       {/* Info de colaboración */}
-      <div className="flex items-center gap-2 mb-1">
+      <div className="flex items-center gap-2 mb-1 pl-2">
         <Image src="/icons/colaborativo2.svg" alt="Poema Colaborativo" width={90} height={16} />
         <p className="text-xs italic text-[#1C2B24]/60">Autor: @lalora</p>
       </div>
@@ -41,10 +41,10 @@ export default function Colab() {
       <hr className="border-t border-[#1C2B24]/10 my-2" />
 
       {/* Título del poema */}
-      <h1 className="text-base font-bold mb-4 text-left max-w-[85%] mx-auto">EL VECINO HABLA CON LOS PAJARITOS</h1>
+      <h1 className="text-base font-bold mb-4 text-left pl-2">EL VECINO HABLA CON LOS PAJARITOS</h1>
 
       {/* Poema editable */}
-      <div className="text-sm whitespace-pre-line leading-relaxed max-w-[85%] mx-auto text-left pb-4">
+      <div className="text-sm whitespace-pre-line leading-relaxed text-left pb-4 pl-2">
         <p className="text-[#1C2B24]/60">qué lenta\nes la danza\nde las nubes</p>
 
         <p className="mt-4 text-[#1C2B24]/60">que deleitan\na los pájaros</p>
