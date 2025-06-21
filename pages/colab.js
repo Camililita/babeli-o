@@ -25,7 +25,7 @@ export default function Colab() {
           <button className="ml-1 text-xl z-10">←</button>
         </Link>
         <h2 className="text-sm font-bold text-center w-full absolute left-0 right-0">Borrador</h2>
-        <div className="w-[160px] flex justify-end mr-2 z-10">
+        <div className="w-[160px] flex justify-end mr-2 z-10 mt-1">
           <button className="bg-[#1C2B24] text-white text-xs px-3 py-1 rounded-full">Revisar colaboración</button>
         </div>
       </div>
@@ -44,16 +44,16 @@ export default function Colab() {
       <h1 className="text-base font-bold mb-4">EL VECINO HABLA CON LOS PAJARITOS</h1>
 
       {/* Poema editable */}
-      <div className="text-sm whitespace-pre-line leading-relaxed max-w-[85%] ml-auto">
-        <p>qué lenta
+      <div className="text-sm whitespace-pre-line leading-relaxed max-w-[85%] text-left mx-auto">
+        <p className="text-left">qué lenta
 es la danza
 de las nubes</p>
 
-        <p className="mt-4">que deleitan
+        <p className="mt-4 text-left">que deleitan
 a los pájaros</p>
 
         <p
-          className="mt-4 italic text-[#1C2B24] cursor-text animate-blink"
+          className="mt-4 italic text-[#1C2B24] cursor-text animate-blink text-left"
           contentEditable
           suppressContentEditableWarning={true}
           ref={inputRef}
@@ -61,10 +61,10 @@ a los pájaros</p>
           que miran desde los cables de la ciudad.
         </p>
 
-        <p className="mt-4">Las miran y comentan que los vientos allá arriba corren rápido</p>
+        <p className="mt-4 text-left">Las miran y comentan que los vientos allá arriba corren rápido</p>
 
         <p
-          className="mt-4 italic text-[#1C2B24] cursor-text animate-blink"
+          className="mt-4 italic text-[#1C2B24] cursor-text animate-blink text-left"
           contentEditable
           suppressContentEditableWarning={true}
         >
@@ -73,26 +73,31 @@ a los pájaros</p>
       </div>
 
       {/* Teclado simulado nativo */}
-      <div className="fixed bottom-0 left-1/2 transform -translate-x-1/2 w-full max-w-[420px] z-20 bg-[#DADADA] p-2 rounded-t-xl shadow-lg">
+      <div className="fixed bottom-0 left-1/2 transform -translate-x-1/2 w-full max-w-[430px] z-20 bg-[#DADADA] p-2 pt-1 rounded-t-xl shadow-lg">
+        <div className="flex justify-between text-[11px] text-[#1C2B24] mb-1 px-2">
+          <span>I</span>
+          <span>I'm</span>
+          <span>we</span>
+        </div>
         <div className="grid grid-cols-10 gap-1 text-center text-xs font-medium">
           {'qwertyuiop'.split('').map((char, i) => (
-            <div key={i} className="bg-white py-2 rounded-md shadow">{char}</div>
+            <div key={i} className="bg-white py-2 rounded-md shadow text-[13px]">{char}</div>
           ))}
         </div>
         <div className="grid grid-cols-9 gap-1 mt-1 ml-3 text-center text-xs font-medium">
           {'asdfghjkl'.split('').map((char, i) => (
-            <div key={i} className="bg-white py-2 rounded-md shadow">{char}</div>
+            <div key={i} className="bg-white py-2 rounded-md shadow text-[13px]">{char}</div>
           ))}
         </div>
         <div className="grid grid-cols-7 gap-1 mt-1 ml-7 text-center text-xs font-medium">
           {'zxcvbnm'.split('').map((char, i) => (
-            <div key={i} className="bg-white py-2 rounded-md shadow">{char}</div>
+            <div key={i} className="bg-white py-2 rounded-md shadow text-[13px]">{char}</div>
           ))}
         </div>
         <div className="flex justify-between items-center gap-1 mt-2 text-xs">
-          <div className="bg-white flex-1 py-2 rounded-md shadow text-center">123</div>
-          <div className="bg-white flex-[3] py-2 rounded-md shadow text-center">space</div>
-          <div className="bg-white flex-1 py-2 rounded-md shadow text-center">return</div>
+          <div className="bg-white flex-1 py-2 rounded-md shadow text-center text-[13px]">123</div>
+          <div className="bg-white flex-[3] py-2 rounded-md shadow text-center text-[13px]">space</div>
+          <div className="bg-white flex-1 py-2 rounded-md shadow text-center text-[13px]">return</div>
         </div>
       </div>
 
