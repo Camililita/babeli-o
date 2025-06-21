@@ -2,22 +2,31 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useEffect, useRef } from 'react';
 
 export default function Colab() {
+  const inputRef = useRef(null);
+
+  useEffect(() => {
+    if (inputRef.current) {
+      inputRef.current.focus();
+    }
+  }, []);
+
   return (
-    <div className="min-h-screen bg-[#F9F9F7] text-[#1C2B24] font-lora relative px-4 pt-8 pb-24">
+    <div className="min-h-screen bg-[#F9F9F7] text-[#1C2B24] font-lora relative px-4 pt-8 pb-40">
       <Head>
         <title>Babel – Colaborar</title>
       </Head>
 
       {/* Header superior con flecha, borrador centrado y botón de revisión */}
-      <div className="flex items-center justify-between mb-2">
+      <div className="flex items-center justify-between mb-4 relative">
         <Link href="/feed">
-          <button className="ml-1 text-xl">←</button>
+          <button className="ml-1 text-xl z-10">←</button>
         </Link>
         <h2 className="text-sm font-bold text-center w-full absolute left-0 right-0">Borrador</h2>
-        <div className="w-[120px] flex justify-end">
-          <button className="bg-[#1C2B24] text-white text-xs px-3 py-1 rounded-full z-10 relative">Revisar colaboración</button>
+        <div className="w-[140px] flex justify-end mt-1 mr-2 z-10 translate-y-2">
+          <button className="bg-[#1C2B24] text-white text-xs px-3 py-1 rounded-full">Revisar colaboración</button>
         </div>
       </div>
 
@@ -41,26 +50,60 @@ export default function Colab() {
         <p className="mt-4">que deleitan
         a los pájaros</p>
 
-        <p className="mt-4 italic text-[#1C2B24] cursor-text" contentEditable suppressContentEditableWarning={true}>
+        <p
+          className="mt-4 italic text-[#1C2B24] cursor-text animate-blink"
+          contentEditable
+          suppressContentEditableWarning={true}
+          ref={inputRef}
+        >
           que miran desde los cables de la ciudad.
         </p>
 
         <p className="mt-4">Las miran y comentan que los vientos allá arriba corren rápido</p>
 
-        <p className="mt-4 italic text-[#1C2B24] cursor-text" contentEditable suppressContentEditableWarning={true}>
+        <p
+          className="mt-4 italic text-[#1C2B24] cursor-text animate-blink"
+          contentEditable
+          suppressContentEditableWarning={true}
+        >
           y que sus antepasados sabían volar sin nada a lo que aferrarse.
         </p>
       </div>
 
-      {/* Teclado simulado (imagen real en vez de texto) */}
-      <div className="fixed bottom-16 left-1/2 transform -translate-x-1/2">
-        <Image src="/icons/keyboard.png" alt="Teclado simulado" width={320} height={160} />
+      {/* Teclado simulado nativo */}
+      <div className="fixed bottom-0 left-1/2 transform -translate-x-1/2 w-full max-w-[420px] z-20 bg-[#DADADA] p-2 rounded-t-xl shadow-lg">
+        <div className="grid grid-cols-10 gap-1 text-center text-xs font-medium">
+          {'qwertyuiop'.split('').map((char, i) => (
+            <div key={i} className="bg-white py-2 rounded-md shadow">{char}</div>
+          ))}
+        </div>
+        <div className="grid grid-cols-9 gap-1 mt-1 ml-3 text-center text-xs font-medium">
+          {'asdfghjkl'.split('').map((char, i) => (
+            <div key={i} className="bg-white py-2 rounded-md shadow">{char}</div>
+          ))}
+        </div>
+        <div className="grid grid-cols-7 gap-1 mt-1 ml-7 text-center text-xs font-medium">
+          {'zxcvbnm'.split('').map((char, i) => (
+            <div key={i} className="bg-white py-2 rounded-md shadow">{char}</div>
+          ))}
+        </div>
+        <div className="flex justify-between items-center gap-1 mt-2 text-xs">
+          <div className="bg-white flex-1 py-2 rounded-md shadow text-center">123</div>
+          <div className="bg-white flex-[3] py-2 rounded-md shadow text-center">space</div>
+          <div className="bg-white flex-1 py-2 rounded-md shadow text-center">return</div>
+        </div>
       </div>
 
       {/* Botón flotante Aa */}
-      <div className="fixed bottom-4 right-5 z-50">
+      <div className="fixed bottom-[170px] right-5 z-50">
         <Image src="/icons/Aa.svg" alt="Estilo" width={48} height={48} />
       </div>
+
+      <style jsx>{`
+        .animate-blink {
+          caret-color: black;
+        }
+      `}</style>
     </div>
   );
 }
