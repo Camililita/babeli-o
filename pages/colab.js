@@ -41,15 +41,15 @@ export default function Colab() {
       <hr className="border-t border-[#1C2B24]/10 my-2" />
 
       {/* Título del poema */}
-      <h1 className="text-base font-bold mb-4">EL VECINO HABLA CON LOS PAJARITOS</h1>
+      <h1 className="text-base font-bold mb-4 text-left max-w-[85%] mx-auto">EL VECINO HABLA CON LOS PAJARITOS</h1>
 
       {/* Poema editable */}
-      <div className="text-sm whitespace-pre-line leading-relaxed max-w-[85%] text-left mx-auto">
-        <p className="text-left">qué lenta
+      <div className="text-sm whitespace-pre-line leading-relaxed max-w-[85%] mx-auto">
+        <p className="text-left text-[#1C2B24]/60">qué lenta
 es la danza
 de las nubes</p>
 
-        <p className="mt-4 text-left">que deleitan
+        <p className="mt-4 text-left text-[#1C2B24]/60">que deleitan
 a los pájaros</p>
 
         <p
@@ -61,7 +61,7 @@ a los pájaros</p>
           que miran desde los cables de la ciudad.
         </p>
 
-        <p className="mt-4 text-left">Las miran y comentan que los vientos allá arriba corren rápido</p>
+        <p className="mt-4 text-left text-[#1C2B24]/60">Las miran y comentan que los vientos allá arriba corren rápido</p>
 
         <p
           className="mt-4 italic text-[#1C2B24] cursor-text animate-blink text-left"
@@ -74,27 +74,27 @@ a los pájaros</p>
 
       {/* Teclado simulado nativo */}
       <div className="fixed bottom-0 left-1/2 transform -translate-x-1/2 w-full max-w-[430px] z-20 bg-[#DADADA] p-2 pt-1 rounded-t-xl shadow-lg">
-        <div className="flex justify-between text-[11px] text-[#1C2B24] mb-1 px-2">
+        <div className="flex justify-around text-[11px] text-[#1C2B24] mb-1 px-2">
           <span>I</span>
           <span>I'm</span>
           <span>we</span>
         </div>
-        <div className="grid grid-cols-10 gap-1 text-center text-xs font-medium">
+        <div className="grid grid-cols-10 gap-1 text-center text-xs font-medium px-2">
           {'qwertyuiop'.split('').map((char, i) => (
             <div key={i} className="bg-white py-2 rounded-md shadow text-[13px]">{char}</div>
           ))}
         </div>
-        <div className="grid grid-cols-9 gap-1 mt-1 ml-3 text-center text-xs font-medium">
+        <div className="grid grid-cols-9 gap-1 mt-1 px-4 text-center text-xs font-medium">
           {'asdfghjkl'.split('').map((char, i) => (
             <div key={i} className="bg-white py-2 rounded-md shadow text-[13px]">{char}</div>
           ))}
         </div>
-        <div className="grid grid-cols-7 gap-1 mt-1 ml-7 text-center text-xs font-medium">
+        <div className="grid grid-cols-7 gap-1 mt-1 px-8 text-center text-xs font-medium">
           {'zxcvbnm'.split('').map((char, i) => (
             <div key={i} className="bg-white py-2 rounded-md shadow text-[13px]">{char}</div>
           ))}
         </div>
-        <div className="flex justify-between items-center gap-1 mt-2 text-xs">
+        <div className="flex justify-between items-center gap-1 mt-2 px-2 text-xs">
           <div className="bg-white flex-1 py-2 rounded-md shadow text-center text-[13px]">123</div>
           <div className="bg-white flex-[3] py-2 rounded-md shadow text-center text-[13px]">space</div>
           <div className="bg-white flex-1 py-2 rounded-md shadow text-center text-[13px]">return</div>
@@ -102,7 +102,7 @@ a los pájaros</p>
       </div>
 
       {/* Botón flotante Aa */}
-      <div className="fixed bottom-[170px] right-5 z-50">
+      <div className="fixed bottom-[260px] right-5 z-50">
         <Image src="/icons/Aa.svg" alt="Estilo" width={48} height={48} />
       </div>
 
