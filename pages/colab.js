@@ -44,7 +44,7 @@ export default function Colab() {
       <h1 className="text-base font-bold mb-4 text-left pl-2">EL VECINO HABLA CON LOS PAJARITOS</h1>
 
       {/* Poema editable */}
-      <div className="text-sm whitespace-pre-line leading-relaxed text-left pb-4 pl-2 max-w-[290px]">
+      <div className="text-sm whitespace-pre-line leading-relaxed text-left pb-4 pl-2 max-w-[260px]">
         <p className="text-[#1C2B24]/60">
           qué lenta<br />
           es la danza<br />
@@ -83,7 +83,8 @@ export default function Colab() {
           y que sus<br />
           antepasados<br />
           sabían volar<br />
-          sin nada a lo que<br />
+          sin nada<br />
+          a lo que<br />
           aferrarse.
         </p>
       </div>
@@ -118,7 +119,7 @@ export default function Colab() {
       </div>
 
       {/* Botón flotante Aa */}
-      <div className="fixed bottom-[160px] right-5 z-50">
+      <div className="fixed bottom-[200px] right-5 z-50">
         <Image src="/icons/Aa.svg" alt="Estilo" width={48} height={48} />
       </div>
 
