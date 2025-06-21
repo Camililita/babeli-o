@@ -44,10 +44,17 @@ export default function Colab() {
       <h1 className="text-base font-bold mb-4 text-left pl-2">EL VECINO HABLA CON LOS PAJARITOS</h1>
 
       {/* Poema editable */}
-      <div className="text-sm whitespace-pre-line leading-relaxed text-left pb-4 pl-2">
-        <p className="text-[#1C2B24]/60">qué lenta\nes la danza\nde las nubes</p>
+      <div className="text-sm whitespace-pre-line leading-relaxed text-left pb-4 pl-2 max-w-[290px]">
+        <p className="text-[#1C2B24]/60">
+          qué lenta<br />
+          es la danza<br />
+          de las nubes
+        </p>
 
-        <p className="mt-4 text-[#1C2B24]/60">que deleitan\na los pájaros</p>
+        <p className="mt-4 text-[#1C2B24]/60">
+          que deleitan<br />
+          a los pájaros
+        </p>
 
         <p
           className="mt-4 italic text-[#1C2B24] cursor-text animate-blink"
@@ -55,17 +62,28 @@ export default function Colab() {
           suppressContentEditableWarning={true}
           ref={inputRef}
         >
-          que miran desde los cables de la ciudad.
+          que miran<br />
+          desde los cables<br />
+          de la ciudad.
         </p>
 
-        <p className="mt-4 text-[#1C2B24]/60">Las miran y comentan que los vientos allá arriba corren rápido</p>
+        <p className="mt-4 text-[#1C2B24]/60">
+          Las miran<br />
+          y comentan<br />
+          que los vientos<br />
+          allá arriba<br />
+          corren rápido
+        </p>
 
         <p
           className="mt-4 italic text-[#1C2B24] cursor-text animate-blink"
           contentEditable
           suppressContentEditableWarning={true}
         >
-          y que sus antepasados sabían volar sin nada a lo que aferrarse.
+          y que sus<br />
+          antepasados sabían<br />
+          volar sin nada<br />
+          a lo que aferrarse.
         </p>
       </div>
 
@@ -99,7 +117,7 @@ export default function Colab() {
       </div>
 
       {/* Botón flotante Aa */}
-      <div className="fixed bottom-[330px] right-5 z-50">
+      <div className="fixed bottom-[115px] right-5 z-50">
         <Image src="/icons/Aa.svg" alt="Estilo" width={48} height={48} />
       </div>
 
