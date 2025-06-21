@@ -81,9 +81,10 @@ export default function Colab() {
           suppressContentEditableWarning={true}
         >
           y que sus<br />
-          antepasados sabían<br />
-          volar sin nada<br />
-          a lo que aferrarse.
+          antepasados<br />
+          sabían volar<br />
+          sin nada a lo que<br />
+          aferrarse.
         </p>
       </div>
 
@@ -117,7 +118,7 @@ export default function Colab() {
       </div>
 
       {/* Botón flotante Aa */}
-      <div className="fixed bottom-[115px] right-5 z-50">
+      <div className="fixed bottom-[160px] right-5 z-50">
         <Image src="/icons/Aa.svg" alt="Estilo" width={48} height={48} />
       </div>
 
