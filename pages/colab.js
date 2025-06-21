@@ -13,10 +13,12 @@ export default function Colab() {
       {/* Header superior con flecha, borrador centrado y botón de revisión */}
       <div className="flex items-center justify-between mb-2">
         <Link href="/feed">
-          <Image src="/icons/flecha.svg" alt="Volver" width={24} height={24} />
+          <Image src="/icons/flecha.svg" alt="Volver" width={24} height={24} className="ml-1" />
         </Link>
-        <h2 className="text-sm font-bold">Borrador</h2>
-        <button className="bg-[#1C2B24] text-white text-xs px-3 py-1 rounded-full">Revisar colaboración</button>
+        <h2 className="text-sm font-bold text-center w-full absolute left-0 right-0">Borrador</h2>
+        <div className="w-[120px] flex justify-end">
+          <button className="bg-[#1C2B24] text-white text-xs px-3 py-1 rounded-full z-10 relative">Revisar colaboración</button>
+        </div>
       </div>
 
       {/* Info de colaboración */}
@@ -30,37 +32,39 @@ export default function Colab() {
       {/* Título del poema */}
       <h1 className="text-base font-bold mb-4">EL VECINO HABLA CON LOS PAJARITOS</h1>
 
-      {/* Poema con partes en itálica como editables */}
+      {/* Poema editable */}
       <div className="text-sm whitespace-pre-line leading-relaxed">
-        qué lenta
+        <p>qué lenta
         es la danza
-        de las nubes
+        de las nubes</p>
 
-        {'\n\n'}que deleitan
-        a los pájaros
+        <p className="mt-4">que deleitan
+        a los pájaros</p>
 
-        {'\n\n'}<em contentEditable suppressContentEditableWarning={true} className="italic text-[#1C2B24]">
+        <p className="mt-4 italic text-[#1C2B24]" contentEditable suppressContentEditableWarning={true}>
           que miran
           desde los cables
           de la ciudad.
-        </em>
+        </p>
 
-        {'\n\n'}Las miran y comentan
+        <p className="mt-4">Las miran y comentan
         que los vientos allá arriba
-        corren rápido
+        corren rápido</p>
 
-        {'\n\n'}<em contentEditable suppressContentEditableWarning={true} className="italic text-[#1C2B24]">
+        <p className="mt-4 italic text-[#1C2B24]" contentEditable suppressContentEditableWarning={true}>
           y que sus antepasados
           sabían volar
           sin nada a lo que aferrarse.
-        </em>
+        </p>
       </div>
 
       {/* Teclado simulado */}
-      <p className="text-center text-xs text-[#1C2B24]/50 mt-8">(Teclado simulado)</p>
+      <div className="fixed bottom-16 left-1/2 transform -translate-x-1/2 text-xs text-[#1C2B24]/50">
+        (Teclado simulado)
+      </div>
 
       {/* Botón flotante Aa */}
-      <div className="fixed bottom-24 right-5 z-50">
+      <div className="fixed bottom-4 right-5 z-50">
         <Image src="/icons/Aa.svg" alt="Estilo" width={48} height={48} />
       </div>
     </div>
