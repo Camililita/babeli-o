@@ -1,95 +1,79 @@
-// pages/explorar.js
+// pages/explora.js
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function Explorar() {
+export default function Explora() {
+  const posts = [
+    {
+      user: '@lalora',
+      location: 'González Catán, Argentina',
+      title: 'EL VECINO HABLA CON LOS PAJARITOS',
+      excerpt: 'qué lenta\nes la danza\nde las nubes ...',
+      avatar: '/users/lalora.jpg'
+    },
+    {
+      user: '@delfinasanda',
+      location: 'González Catán, Argentina',
+      title: 'EL VECINO HABLA CON LOS PAJARITOS',
+      excerpt: 'qué lenta\nes la danza\nde las nubes ...',
+      avatar: '/users/delfinasanda.jpg'
+    }
+  ];
+
   return (
-    <div className="min-h-screen bg-[#F9F9F7] text-[#1C2B24] font-lora relative pb-24">
+    <div className="min-h-screen bg-[#F9F9F7] font-lora pb-24">
       <Head>
-        <title>Babel – Explorar</title>
+        <title>Explora Babel</title>
       </Head>
 
-      {/* Header */}
-      <div className="flex items-center justify-between px-4 pt-6">
-        <Image
-          src="/icons/profile-placeholder.png"
-          alt="Foto de perfil"
-          width={36}
-          height={36}
-          className="rounded-full"
-        />
-        <h1 className="font-typewriter text-xl tracking-wide">Explora Babel</h1>
-        <Image
-          src="/icons/filter.svg"
-          alt="Filtrar"
-          width={20}
-          height={20}
-        />
+      <div className="flex items-center justify-between px-4 pt-5 pb-3">
+        <Image src="/users/juancarlos.jpg" alt="Perfil" width={32} height={32} className="rounded-full" />
+        <h1 className="text-xl font-bold font-[rough_typewriter] tracking-tight">Explora Babel</h1>
+        <Image src="/icons/filter.svg" alt="Filter" width={24} height={24} />
       </div>
 
-      {/* Barra de búsqueda */}
-      <div className="relative mx-4 mt-4">
+      <div className="relative px-4 mb-4">
         <input
           type="text"
           placeholder="Buscar"
-          className="w-full px-4 py-2 pr-10 text-sm rounded-full border border-[#1C2B24]/10 bg-transparent focus:outline-none"
+          className="w-full rounded-full px-4 py-2 text-sm border border-[#1C2B24]/10 placeholder:text-[#1C2B24]/40"
         />
-        <Image
-          src="/icons/filter.svg"
-          alt="Filtrar"
-          width={18}
-          height={18}
-          className="absolute right-3 top-2.5"
-        />
+        <div className="absolute top-2 right-6">
+          <Image src="/icons/search.svg" alt="Buscar" width={20} height={20} />
+        </div>
       </div>
 
-      {/* Lista de poemas */}
-      <div className="mt-6 px-4 space-y-6">
-        {[1, 2].map((i) => (
-          <div key={i} className="relative pb-4 border-b border-dashed border-[#1C2B24]/20">
-            <div className="flex items-center gap-2">
-              <Image
-                src="/icons/profile-placeholder.png"
-                alt="Perfil"
-                width={32}
-                height={32}
-                className="rounded-full"
-              />
+      <div className="space-y-6 px-4">
+        {posts.map((post, index) => (
+          <div key={index}>
+            <div className="flex items-start gap-2">
+              <Image src={post.avatar} alt={post.user} width={28} height={28} className="rounded-full" />
               <div>
-                <p className="text-sm font-semibold">@lalora</p>
-                <p className="text-[11px] text-[#1C2B24]/60 leading-tight -mt-1">González Catán, Argentina</p>
+                <p className="text-sm font-medium">{post.user}</p>
+                <p className="text-[11px] text-[#1C2B24]/60 -mt-1">{post.location}</p>
+                <p className="text-sm font-bold mt-1 mb-1">{post.title}</p>
+                <p className="text-sm whitespace-pre-line leading-snug text-[#1C2B24]/90">{post.excerpt}</p>
               </div>
             </div>
-            <div className="mt-2">
-              <h2 className="text-[13px] font-bold leading-snug">EL VECINO HABLA CON LOS PAJARITOS</h2>
-              <p className="text-[13px] leading-snug mt-1 whitespace-pre-line">
-                qué lenta
-                es la danza
-                de las nubes
-                ...
-              </p>
-              <button className="text-[10px] absolute bottom-0 right-0 bg-[#1C2B24]/10 px-3 py-0.5 rounded-full">Leer</button>
+            <div className="flex justify-end items-center mt-2">
+              <button className="text-[11px] bg-[#DADADA] text-[#1C2B24] rounded-full px-3 py-1">Leer</button>
+            </div>
+            <div className="flex justify-center mt-3">
+              <Image src="/icons/lineas_punteadas.svg" alt="Separador" width={150} height={8} />
             </div>
           </div>
         ))}
       </div>
 
-      {/* Nav bar inferior */}
-      <div className="fixed bottom-0 left-0 w-full bg-[#F9F9F7] border-t border-[#1C2B24]/10 px-6 py-2 flex justify-between items-center">
+      <div className="fixed bottom-0 left-0 w-full max-w-[500px] mx-auto px-4 py-2 bg-white border-t border-[#1C2B24]/10 flex justify-between items-center text-xs">
         <Image src="/icons/home.svg" alt="Inicio" width={24} height={24} />
         <Image src="/icons/search.svg" alt="Buscar" width={24} height={24} />
-        <Image src="/icons/colab.svg" alt="Colaborar" width={24} height={24} />
-        <Image src="/icons/messages.svg" alt="Mensajes" width={24} height={24} />
-        <Image src="/icons/trophy.svg" alt="Concursos" width={24} height={24} />
-        <Image src="/icons/heart-hands.svg" alt="Colaboraciones" width={24} height={24} />
+        <Image src="/icons/colab.svg" alt="Colab" width={24} height={24} />
+        <Image src="/icons/mensajes.svg" alt="Mensajes" width={24} height={24} />
+        <Image src="/icons/trofeo.svg" alt="Trofeo" width={24} height={24} />
+        <Image src="/icons/heart_hands.svg" alt="Colaboraciones" width={24} height={24} />
       </div>
-
-      <style jsx>{`
-        .font-typewriter {
-          font-family: 'rough_typewriter', serif;
-        }
-      `}</style>
     </div>
   );
 }
