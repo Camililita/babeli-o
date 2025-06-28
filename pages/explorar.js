@@ -29,7 +29,7 @@ export default function Explora() {
 
       <div className="flex items-center justify-between px-4 pt-5 pb-3">
         <Image src="/profile/juancarlos.jpg" alt="Perfil" width={32} height={32} className="rounded-full" />
-        <h1 className="text-4xl tracking-tight" style={{ fontFamily: 'rough_typewriter', fontWeight: 400 }}>Explora Babel</h1>
+        <h1 className="text-[120px] font-typewriter mb-1">Explora Babel</h1>
         <Image src="/icons/Filter.svg" alt="Filter" width={24} height={24} />
       </div>
 
@@ -60,7 +60,7 @@ export default function Explora() {
               <button className="text-[11px] bg-[#DADADA] text-[#1C2B24] rounded-full px-3 py-1">Leer</button>
             </div>
             <div className="flex justify-center mt-3">
-              <Image src="/icons/Lineas Punteadas.svg" alt="Separador" width={200} height={16} className="opacity-100 brightness-[10] contrast-[200%]" />
+              <Image src="/icons/Lineas Punteadas.svg" alt="Separador" width={200} height={16} className="opacity-100 brightness-[30] contrast-[400%]" />
             </div>
           </div>
         ))}
@@ -69,10 +69,10 @@ export default function Explora() {
       <div className="fixed bottom-0 left-0 w-full bg-white border-t border-[#1C2B24]/10 py-2 px-6 flex justify-between items-center max-w-[500px] mx-auto z-50">
         <Image src="/icons/casa.svg" alt="Inicio" width={24} height={24} />
         <Image src="/icons/search.svg" alt="Buscar" width={24} height={24} />
-        <Image src="/icons/colab.svg" alt="Colaboraciones" width={24} height={24} />
+        <Image src="/icons/manito.svg" alt="Colaboraciones" width={24} height={24} />
         <Image src="/icons/mensajito.svg" alt="Mensajes" width={24} height={24} />
         <Image src="/icons/premio.svg" alt="Concursos" width={24} height={24} />
-        <Image src="/icons/corazonmanos.svg" alt="Manos" width={24} height={24} />
+        <Image src="/icons/colab.svg" alt="Manos" width={24} height={24} />
       </div>
     </div>
   );
