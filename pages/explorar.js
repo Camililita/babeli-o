@@ -10,14 +10,14 @@ export default function Explora() {
       location: 'González Catán, Argentina',
       title: 'EL VECINO HABLA CON LOS PAJARITOS',
       excerpt: 'qué lenta\nes la danza\nde las nubes ...',
-      avatar: '/users/lalora.jpg'
+      avatar: '/profile/lalora.jpg'
     },
     {
       user: '@delfinasanda',
       location: 'González Catán, Argentina',
       title: 'EL VECINO HABLA CON LOS PAJARITOS',
       excerpt: 'qué lenta\nes la danza\nde las nubes ...',
-      avatar: '/users/delfinasanda.jpg'
+      avatar: '/profile/delfinasanda.jpg'
     }
   ];
 
@@ -28,9 +28,9 @@ export default function Explora() {
       </Head>
 
       <div className="flex items-center justify-between px-4 pt-5 pb-3">
-        <Image src="/users/juancarlos.jpg" alt="Perfil" width={32} height={32} className="rounded-full" />
+        <Image src="/profile/juancarlos.jpg" alt="Perfil" width={32} height={32} className="rounded-full" />
         <h1 className="text-xl font-bold font-[rough_typewriter] tracking-tight">Explora Babel</h1>
-        <Image src="/icons/filter.svg" alt="Filter" width={24} height={24} />
+        <Image src="/icons/Filter.svg" alt="Filter" width={24} height={24} />
       </div>
 
       <div className="relative px-4 mb-4">
@@ -60,19 +60,19 @@ export default function Explora() {
               <button className="text-[11px] bg-[#DADADA] text-[#1C2B24] rounded-full px-3 py-1">Leer</button>
             </div>
             <div className="flex justify-center mt-3">
-              <Image src="/icons/lineas_punteadas.svg" alt="Separador" width={150} height={8} />
+              <Image src="/icons/Lineas Punteadas.svg" alt="Separador" width={150} height={8} />
             </div>
           </div>
         ))}
       </div>
 
       <div className="fixed bottom-0 left-0 w-full max-w-[500px] mx-auto px-4 py-2 bg-white border-t border-[#1C2B24]/10 flex justify-between items-center text-xs">
-        <Image src="/icons/home.svg" alt="Inicio" width={24} height={24} />
+        <Image src="/icons/casa.svg" alt="Inicio" width={24} height={24} />
         <Image src="/icons/search.svg" alt="Buscar" width={24} height={24} />
         <Image src="/icons/colab.svg" alt="Colab" width={24} height={24} />
-        <Image src="/icons/mensajes.svg" alt="Mensajes" width={24} height={24} />
-        <Image src="/icons/trofeo.svg" alt="Trofeo" width={24} height={24} />
-        <Image src="/icons/heart_hands.svg" alt="Colaboraciones" width={24} height={24} />
+        <Image src="/icons/mensajito.svg" alt="Mensajes" width={24} height={24} />
+        <Image src="/icons/premio.svg" alt="Trofeo" width={24} height={24} />
+        <Image src="/icons/manito.svg" alt="Colaboraciones" width={24} height={24} />
       </div>
     </div>
   );
