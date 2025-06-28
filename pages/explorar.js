@@ -29,7 +29,7 @@ export default function Explora() {
 
       <div className="flex items-center justify-between px-4 pt-5 pb-3">
         <Image src="/profile/juancarlos.jpg" alt="Perfil" width={32} height={32} className="rounded-full" />
-        <h1 className="text-3xl font-bold font-[rough_typewriter] tracking-tight">Explora</h1>
+        <h1 className="text-4xl font-bold font-[rough_typewriter] tracking-tight">Explora Babel</h1>
         <Image src="/icons/Filter.svg" alt="Filter" width={24} height={24} />
       </div>
 
@@ -37,9 +37,9 @@ export default function Explora() {
         <input
           type="text"
           placeholder="Buscar"
-          className="w-full rounded-full px-4 py-2 text-sm border border-[#1C2B24]/10 placeholder:text-[#1C2B24]/40"
+          className="w-full rounded-full px-10 py-2 text-sm border border-[#1C2B24]/10 placeholder:text-[#1C2B24]/40"
         />
-        <div className="absolute top-2 right-6">
+        <div className="absolute top-2.5 left-4">
           <Image src="/icons/search.svg" alt="Buscar" width={20} height={20} />
         </div>
       </div>
@@ -60,7 +60,7 @@ export default function Explora() {
               <button className="text-[11px] bg-[#DADADA] text-[#1C2B24] rounded-full px-3 py-1">Leer</button>
             </div>
             <div className="flex justify-center mt-3">
-              <Image src="/icons/Lineas Punteadas.svg" alt="Separador" width={180} height={12} className="opacity-100" />
+              <Image src="/icons/Lineas Punteadas.svg" alt="Separador" width={180} height={12} className="opacity-100 brightness-0 invert" />
             </div>
           </div>
         ))}
@@ -69,8 +69,10 @@ export default function Explora() {
       <div className="fixed bottom-0 left-0 w-full bg-white border-t border-[#1C2B24]/10 py-2 px-6 flex justify-between items-center max-w-[500px] mx-auto z-50">
         <Image src="/icons/casa.svg" alt="Inicio" width={24} height={24} />
         <Image src="/icons/search.svg" alt="Buscar" width={24} height={24} />
-        <Image src="/icons/manito.svg" alt="Colaboraciones" width={24} height={24} />
-        <Image src="/icons/lapiz.svg" alt="Escribir" width={28} height={28} className="-mt-5" />
+        <Image src="/icons/colab.svg" alt="Colab" width={24} height={24} />
+        <div className="relative -mt-5">
+          <Image src="/icons/lapiz.svg" alt="Escribir" width={36} height={36} />
+        </div>
         <Image src="/icons/mensajito.svg" alt="Mensajes" width={24} height={24} />
         <Image src="/icons/premio.svg" alt="Concursos" width={24} height={24} />
       </div>
