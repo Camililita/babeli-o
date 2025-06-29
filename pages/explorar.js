@@ -29,7 +29,7 @@ export default function Explora() {
 
       <div className="flex items-center justify-between px-4 pt-5 pb-3">
         <Image src="/profile/juancarlos.jpg" alt="Perfil" width={32} height={32} className="rounded-full" />
-        <h1 className="text-[120px] font-typewriter mb-1">Explora Babel</h1>
+        <h1 className="text-[40px] font-typewriter mb-1">Explora Babel</h1>
         <Image src="/icons/Filter.svg" alt="Filter" width={24} height={24} />
       </div>
 
