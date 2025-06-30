@@ -31,7 +31,7 @@ export default function Explora() {
         <div className="flex items-center justify-between mb-2">
           <Image src="/profile/juancarlos.jpg" alt="Perfil" width={32} height={32} className="rounded-full" />
           <h1 className="text-[40px] font-typewriter">Explora Babel</h1>
-          <Image src="/icons/Filter.svg" alt="Filter" width={24} height={24} />
+          <Image src="/icons/Filter.svg" alt="Filter" width={24} height={24} className="mt-2" />
         </div>
 
         <div className="flex items-center border-b border-[#1C2B24]/20 py-2">
@@ -60,7 +60,7 @@ export default function Explora() {
               <button className="text-[11px] bg-[#DADADA] text-[#1C2B24] rounded-full px-3 py-1">Leer</button>
             </div>
             <div className="flex justify-center mt-3">
-              <Image src="/icons/Lineas Punteadas.svg" alt="Separador" width={200} height={16} className="opacity-100 brightness-[30] contrast-[400%]" />
+              <Image src="/icons/Lineas Punteadas.svg" alt="Separador" width={200} height={16} className="opacity-100 brightness-[0] contrast-[500%]" />
             </div>
           </div>
         ))}
