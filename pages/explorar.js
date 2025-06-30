@@ -28,19 +28,22 @@ export default function Explora() {
       </Head>
 
       <div className="px-4 pt-5 pb-3">
-        <div className="flex items-center justify-between mb-2">
+        <div className="flex items-center justify-between mb-1">
           <Image src="/profile/juancarlos.jpg" alt="Perfil" width={32} height={32} className="rounded-full" />
           <h1 className="text-[40px] font-typewriter">Explora Babel</h1>
-          <Image src="/icons/Filter.svg" alt="Filter" width={24} height={24} className="mt-2" />
+          {/* Ícono de filtro se movió a la línea del input */}
         </div>
 
-        <div className="flex items-center border-b border-[#1C2B24]/20 py-2">
-          <Image src="/icons/search.svg" alt="Buscar" width={20} height={20} className="ml-1 mr-3" />
-          <input
-            type="text"
-            placeholder="Buscar"
-            className="w-full text-sm placeholder:text-[#1C2B24]/40 bg-transparent focus:outline-none"
-          />
+        <div className="flex items-center justify-between border-b border-[#1C2B24]/20 py-2">
+          <div className="flex items-center flex-grow">
+            <Image src="/icons/search.svg" alt="Buscar" width={20} height={20} className="ml-1 mr-3" />
+            <input
+              type="text"
+              placeholder="Buscar"
+              className="w-full text-sm placeholder:text-[#1C2B24]/40 bg-transparent focus:outline-none"
+            />
+          </div>
+          <Image src="/icons/Filter.svg" alt="Filter" width={20} height={20} className="ml-3" />
         </div>
       </div>
 
@@ -60,7 +63,7 @@ export default function Explora() {
               <button className="text-[11px] bg-[#DADADA] text-[#1C2B24] rounded-full px-3 py-1">Leer</button>
             </div>
             <div className="flex justify-center mt-3">
-              <Image src="/icons/Lineas Punteadas.svg" alt="Separador" width={200} height={16} className="opacity-100 brightness-[0] contrast-[500%]" />
+              <Image src="/icons/Lineas Punteadas.svg" alt="Separador" width={200} height={16} className="opacity-100 brightness-0 contrast-[800%]" />
             </div>
           </div>
         ))}
