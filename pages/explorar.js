@@ -28,10 +28,8 @@ export default function Explora() {
       </Head>
 
       <div className="px-4 pt-5 pb-3">
-        <div className="flex items-center justify-between mb-1">
-          <Image src="/profile/juancarlos.jpg" alt="Perfil" width={32} height={32} className="rounded-full" />
-          <h1 className="text-[40px] font-typewriter">Explora Babel</h1>
-          {/* Ícono de filtro se movió a la línea del input */}
+        <div className="flex justify-center mb-1">
+          <h1 className="text-[35px] font-typewriter">Explora Babel</h1>
         </div>
 
         <div className="flex items-center justify-between border-b border-[#1C2B24]/20 py-2">
