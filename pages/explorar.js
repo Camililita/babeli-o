@@ -28,9 +28,11 @@ export default function Explora() {
       </Head>
 
       <div className="px-4 pt-5 pb-3">
-        <div className="flex items-center justify-center gap-2 mb-1">
-          <Image src="/profile/lalora.jpg" alt="Avatar" width={30} height={30} className="rounded-full" />
-          <h1 className="text-[35px] font-typewriter">Explora Babel</h1>
+        <div className="flex items-center justify-center gap-2 mb-1 relative">
+          <div className="absolute left-0">
+            <Image src="/profile/lalora.jpg" alt="Avatar" width={30} height={30} className="rounded-full" />
+          </div>
+          <h1 className="text-[35px] font-typewriter text-center w-full">Explora Babel</h1>
         </div>
 
         <div className="flex items-center justify-between border-b border-[#1C2B24]/20 py-2">
